@@ -213,7 +213,7 @@ class DataGenerator(keras.utils.Sequence):
 
     def __init__(self,
                  list_IDs,
-                 batch_size=1, #32
+                 batch_size=32,
                  input_dim=((13, 256, 256), (2, 256, 256)),
                  scale=2000,
                  shuffle=True,
