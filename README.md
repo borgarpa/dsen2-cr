@@ -51,7 +51,15 @@ conda create -n dsen2cr_env
 conda activate dsen2cr_env
 conda install -c conda-forge python=3.7 tensorflow-gpu=1.15.0 keras=2.2.4 numpy scipy rasterio pydot graphviz h5py
 ```
+When installing in Google Colabs it must be installed as follows:
+```
+!pip uninstall -y tensorflow
+!pip uninstall -y keras-nightly
 
+!pip install tensorflow-gpu==1.15.0 keras==2.2.4 numpy
+!pip install scipy rasterio pydot graphviz
+!pip install 'h5py<3.0.0'
+```
 Alternatively, a Dockerfile is provided in `Docker/Dockerfile` which can be used to create a Docker image including CUDA.
 
 Note: 
