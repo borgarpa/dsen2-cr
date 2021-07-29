@@ -31,13 +31,14 @@ def get_train_val_test_filelists(listpath):
     test_filelist = []
     for f in filelist:
         line_entries = f[0].split(sep=", ")
-        print('line_entries', line_entries)
+        print('- line_entries', line_entries)
+        print('- line_entries[0]', line_entries[0])
         if line_entries[0] == '1':
-            train_filelist.append(line_entries)
+            train_filelist.append(f) #line_entries
         if line_entries[0] == '2':
-            val_filelist.append(line_entries)
+            val_filelist.append(f) #line_entries
         if line_entries[0] == '3':
-            test_filelist.append(line_entries)
+            test_filelist.append(f) #line_entries
 
     return train_filelist, val_filelist, test_filelist
 
