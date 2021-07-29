@@ -350,6 +350,8 @@ class DataGenerator(keras.utils.Sequence):
         return image.astype('float32')
 
     def get_data_image(self, ID, data_type, paramx, paramy):
+        
+        print(ID)
 
         data_path = os.path.join(self.input_data_folder, ID[data_type], ID[4]).lstrip()
 
