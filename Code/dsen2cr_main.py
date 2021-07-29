@@ -81,7 +81,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
 
     # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other setup parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    predict_data_type = 'val'  # possible options: 'val' or 'test'
+    predict_data_type = 'test'  # possible options: 'val' or 'test'
 
     log_step_freq = 1  # frequency of logging
 
