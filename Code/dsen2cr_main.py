@@ -152,6 +152,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
             predict_filelist = val_filelist
         elif predict_data_type == 'test':
             predict_filelist = test_filelist
+            print('- predict_filelist', predict_filelist)
         else:
             raise ValueError('Prediction data type not recognized.')
 
