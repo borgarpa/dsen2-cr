@@ -2,7 +2,7 @@ import csv
 import os
 from random import shuffle
 
-from dataIO import make_dir, DataGenerator, process_predicted
+from tools.dataIO import make_dir, DataGenerator, process_predicted
 from keras.callbacks import ModelCheckpoint, CSVLogger
 from keras.utils import plot_model
 from myCallbacks import CSV_NBatchLogger, NBatchLogger, TensorBoardWrapper
