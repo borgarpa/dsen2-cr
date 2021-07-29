@@ -260,6 +260,9 @@ class DataGenerator(keras.utils.Sequence):
         self.on_epoch_end()
 
         print("Generator initialized")
+        
+        print('list_IDs', list_IDs)
+        print('input_data_folder', input_data_folder)
 
     def __len__(self):
         """Gets the number of batches per epoch"""
@@ -273,8 +276,8 @@ class DataGenerator(keras.utils.Sequence):
         # Find list of IDs
         list_IDs_temp = [self.list_IDs[k] for k in indexes]
         
-        print(list_IDs_temp)
-        print(indexes)
+        print('indexes', indexes)
+        print('list_IDs_temp', list_IDs_temp)
         
         if self.include_target:
             # Generate data
@@ -354,7 +357,7 @@ class DataGenerator(keras.utils.Sequence):
 
     def get_data_image(self, ID, data_type, paramx, paramy):
         
-        print(ID)
+        print('ID', ID)
 
         data_path = os.path.join(self.input_data_folder, ID[data_type], ID[4]).lstrip()
 
