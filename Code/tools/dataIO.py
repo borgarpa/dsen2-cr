@@ -272,7 +272,10 @@ class DataGenerator(keras.utils.Sequence):
 
         # Find list of IDs
         list_IDs_temp = [self.list_IDs[k] for k in indexes]
-
+        
+        print(list_IDs_temp)
+        print(indexes)
+        
         if self.include_target:
             # Generate data
             X, y = self.__data_generation(list_IDs_temp, self.augment_rotation_param[indexes],
