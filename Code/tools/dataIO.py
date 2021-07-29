@@ -24,6 +24,7 @@ def get_train_val_test_filelists(listpath):
     with open(listpath) as f:
         reader = csv.reader(f, delimiter='\t')
         filelist = list(reader)
+        print('filelist', filelist)
 
     train_filelist = []
     val_filelist = []
