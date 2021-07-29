@@ -140,6 +140,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
     print('Model compiled successfully!')
 
     print("Getting file lists")
+    print('dataset_list_filepath', dataset_list_filepath)
     train_filelist, val_filelist, test_filelist = get_train_val_test_filelists(dataset_list_filepath)
 
     print("Number of train files found: ", len(train_filelist))
