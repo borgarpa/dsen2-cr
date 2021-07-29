@@ -157,6 +157,7 @@ def predict_dsen2cr(predict_file, model, model_name, base_out_path, input_data_f
               'use_cloud_mask': use_cloud_mask,
               'max_val_sar': max_val_sar,
               'cloud_threshold': cloud_threshold}
+    print('predict_filelist', predict_filelist)
     predict_generator = DataGenerator(predict_filelist, **params)
 
     eval_csv_name = out_path_predict + 'eval.csv'
