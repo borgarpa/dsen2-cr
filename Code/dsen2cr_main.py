@@ -61,7 +61,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
     # training parameters
     initial_epoch = 0  # start at epoch number
     epochs_nr = 8  # train for this amount of epochs. Checkpoints will be generated at the end of each epoch
-    batch_size = 16  # training batch size to distribute over GPUs
+    batch_size = 1  #(16) training batch size to distribute over GPUs
 
     # define metric to be optimized
     loss = img_met.carl_error
