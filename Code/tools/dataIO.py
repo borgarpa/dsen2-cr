@@ -205,6 +205,7 @@ def process_predicted(predicted, ID, predicted_images_path, scale, cloud_thresho
         data_image *= scale
         print('predicted_images_path', predicted_images_path)
         
+        """
         with rasterio.open(
             os.path.join(predicted_images_path, f'prediction_{i}.tif'),
             'w',
@@ -217,7 +218,9 @@ def process_predicted(predicted, ID, predicted_images_path, scale, cloud_thresho
             transform=dat.transform,
         ) as dst:
         dst.write(data)
+        """
         
+        print('ID[i]', ID[i])
         ### TODO: Modificar función para guardar Tiff con todas las bandas
         generate_output_images(data_image, ID[i], predicted_images_path, input_data_folder, cloud_threshold)
 
