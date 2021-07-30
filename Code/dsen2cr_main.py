@@ -106,7 +106,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
     # config.gpu_options.per_process_gpu_memory_fraction = 0.3
 
     # Create a session with the above options specified.
-    K.tensorflow_backend.set_session(tf.Session(config=config))
+    K.tensorflow_backend.set_session(tf.compat.v1.Session(config=config))
 
     # Set random seeds for repeatability
     random_seed_general = 42
