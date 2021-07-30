@@ -201,6 +201,7 @@ def save_single_images(sar_preview, cloudy_preview, cloudFree_preview, predicted
 def process_predicted(predicted, ID, predicted_images_path, scale, cloud_threshold, input_data_folder):
     for i, data_image in enumerate(predicted):
         data_image *= scale
+        ### TODO: Modificar función para guardar Tiff con todas las bandas
         generate_output_images(data_image, ID[i], predicted_images_path, input_data_folder, cloud_threshold)
 
     return
