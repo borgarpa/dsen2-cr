@@ -49,7 +49,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
     data_augmentation = True  # flip and rotate images randomly for data augmentation
 
     random_crop = True  # crop out a part of the input image randomly
-    crop_size = 128  # crop size for training images
+    crop_size = 256  # crop size for training images (128)
 
     # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Setup training %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -156,7 +156,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
             print('- predict_filelist', predict_filelist)
         else:
             raise ValueError('Prediction data type not recognized.')
-        crop_size = 256
+        
         predict_dsen2cr(predict_file, model, predict_data_type, base_out_path, input_data_folder, predict_filelist,
                         batch_size, clip_min, clip_max, crop_size, input_shape, use_cloud_mask, cloud_threshold,
                         max_val_sar, scale)
