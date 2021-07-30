@@ -98,7 +98,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
     # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Initialize session %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     # Configure Tensorflow session
-    config = tf.ConfigProto()
+    config = tf.compat.v1.ConfigProto()
     # Don't pre-allocate memory; allocate as-needed
     config.gpu_options.allow_growth = True
 
