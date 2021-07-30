@@ -208,7 +208,7 @@ def process_predicted(predicted, ID, predicted_images_path, scale, cloud_thresho
         dat = rasterio.open(os.path.join(input_data_folder, ID[i][3], ID[i][4]))
         
         with rasterio.open(
-            os.path.join(predicted_images_path, f'prediction_{ID[i][4].split('.')[0]}.tif'), #ID[i][4].split('.')[0], 
+            os.path.join(predicted_images_path, f'prediction_{ID[i][4].split(".")[0]}.tif'), #ID[i][4].split('.')[0], 
             'w',
             driver='GTiff',
             height=data_image.shape[1],
