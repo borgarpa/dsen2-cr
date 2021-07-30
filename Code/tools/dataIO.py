@@ -105,6 +105,8 @@ def get_raw_data(path):
 
 
 def get_preview(file, predicted_file, bands, brighten_limit=None, sar_composite=False):
+    
+    print('------> file', file)
     if not predicted_file:
         with rasterio.open(file) as src:
             r, g, b = src.read(bands)
