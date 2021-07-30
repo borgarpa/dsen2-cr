@@ -338,6 +338,7 @@ class DataGenerator(keras.utils.Sequence):
     def get_image_data(self, paramx, paramy, path):
         # with block not working with window kw
         src = rasterio.open(path, 'r', driver='GTiff')
+        ### AÑADIR CASO CONDICIONAL TEST --> No crop
         image = src.read(window=((paramx, paramx + self.crop_size), (paramy, paramy + self.crop_size)))
         src.close()
         image[np.isnan(image)] = np.nanmean(image)  # fill holes and artifacts
