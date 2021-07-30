@@ -218,7 +218,7 @@ def process_predicted(predicted, ID, predicted_images_path, scale, cloud_thresho
             crs=dat.crs,
             transform=dat.transform,
         ) as dst:
-        dst.write(data_image)
+            dst.write(data_image)
         
         
         print('ID[i]', ID[i])
