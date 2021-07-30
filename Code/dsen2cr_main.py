@@ -156,7 +156,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
             print('- predict_filelist', predict_filelist)
         else:
             raise ValueError('Prediction data type not recognized.')
-
+        crop_size = 256
         predict_dsen2cr(predict_file, model, predict_data_type, base_out_path, input_data_folder, predict_filelist,
                         batch_size, clip_min, clip_max, crop_size, input_shape, use_cloud_mask, cloud_threshold,
                         max_val_sar, scale)
