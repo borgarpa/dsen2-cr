@@ -98,7 +98,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
     # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Initialize session %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     # Configure Tensorflow session
-    config = tf.compat.v1.ConfigProto()
+    config = tf.ConfigProto()
     # Don't pre-allocate memory; allocate as-needed
     config.gpu_options.allow_growth = True
 
@@ -106,7 +106,7 @@ def run_dsen2cr(predict_file=None, resume_file=None):
     # config.gpu_options.per_process_gpu_memory_fraction = 0.3
 
     # Create a session with the above options specified.
-    K.set_session(tf.compat.v1.Session(config=config))
+    K.tensorflow_backend.set_session(tf.Session(config=config))
 
     # Set random seeds for repeatability
     random_seed_general = 42
