@@ -197,10 +197,27 @@ def save_single_images(sar_preview, cloudy_preview, cloudFree_preview, predicted
 
     return
 
+def save_tiff():
+    pass
 
 def process_predicted(predicted, ID, predicted_images_path, scale, cloud_threshold, input_data_folder):
     for i, data_image in enumerate(predicted):
         data_image *= scale
+        print('predicted_images_path', predicted_images_path)
+        
+        with rasterio.open(
+            os.path.join(predicted_images_path, f'prediction_{i}.tif'),
+            'w',
+            driver='GTiff',
+            height=data_image.shape[1],
+            width=data_image.shape[2],
+            count=data_image.shape[0],
+            dtype=data_image.dtype,
+            crs=dat.crs,
+            transform=dat.transform,
+        ) as dst:
+        dst.write(data)
+        
         ### TODO: Modificar función para guardar Tiff con todas las bandas
         generate_output_images(data_image, ID[i], predicted_images_path, input_data_folder, cloud_threshold)
 
