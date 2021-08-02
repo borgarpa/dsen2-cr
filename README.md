@@ -49,7 +49,7 @@ A conda environment with the required dependencies can be created with
 ```bash
 conda create -n dsen2cr_env
 conda activate dsen2cr_env
-conda install -c conda-forge python=3.7 tensorflow-gpu=1.15.0 keras=2.2.4 numpy<1.20 scipy rasterio pydot graphviz h5py
+conda install -c conda-forge python=3.7 tensorflow-gpu=1.15.0 keras=2.2.4 numpy=1.19.5 scipy rasterio pydot graphviz h5py
 ```
 When installing in Google Colabs it must be installed as follows:
 ```
